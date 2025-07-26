@@ -1,6 +1,15 @@
 // API configuration and utility functions
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_ELSE_PUBLIC_API_URL;
 
+// Fix the console.log to check the correct variable name
+console.log('🔧 Current API_BASE_URL:', process.env.NEXT_PUBLIC_API_URL);
+console.log('🔧 Fallback API_BASE_URL:', process.env.NEXT_ELSE_PUBLIC_API_URL);
+console.log('🔧 Final API_BASE_URL used:', API_BASE_URL);
+console.log('🔧 Environment check:', {
+  NODE_ENV: process.env.NODE_ENV,
+  all_env_vars: Object.keys(process.env).filter(key => key.includes('API'))
+});
+
 // Types for API responses
 export interface ApiResponse<T = any> {
   success: boolean;
