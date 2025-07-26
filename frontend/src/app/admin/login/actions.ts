@@ -14,7 +14,7 @@ const loginSchema = z.object({
 });
 
 // Backend API URL
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_ELSE_PUBLIC_API_URL;
 
 // Admin login function that connects to backend
 async function authenticateAdmin(email: string, password: string) {
