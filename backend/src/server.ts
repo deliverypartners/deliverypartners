@@ -38,7 +38,7 @@ const allowedOrigins = [
   'http://deliverypartners.in',   // Keep HTTP for fallback
   'http://www.deliverypartners.in',
   'http://localhost:3000',         // For development
-  'http://31.97.226.57:3000'       // For production server(TESTING)
+  `http://${process.env.SERVER_IP}:${process.env.FRONTEND_PORT || '3000'}`       // For production server(TESTING)
 ];
 
 const corsOptions: cors.CorsOptions = {
