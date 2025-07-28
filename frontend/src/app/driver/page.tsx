@@ -209,7 +209,7 @@ export default function DriverPanelPage() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white">
                 <nav className="flex flex-col space-y-4 mt-6">
                   {navigationItems.map((item) => {
                     const Icon = item.icon;
